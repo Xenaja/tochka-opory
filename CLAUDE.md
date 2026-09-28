@@ -6,7 +6,7 @@
 
 - Репозиторий: `github.com/Xenaja/tochka-opory`, GitHub Pages из `main`.
 - Адрес: https://xenaja.github.io/tochka-opory/ (черновик, `noindex`, пока не закрыт PENDING).
-- Макет: `design_handoff_tochka_opory/` (в git не идёт). Утверждён и заморожен — отступления только через `DECISIONS.md`.
+- Макет: `design_handoff_tochka_opory/` + дельта `design_update_tochka_opory/CHANGES.md` (обе в git не идут). Утверждён и заморожен — отступления только через `DECISIONS.md`.
 - Недостающие данные: `PENDING.md`. Процесс: скилл landing-quality.
 
 ## Структура
@@ -17,7 +17,7 @@ css/tokens.css    цвета и параметры шрифта заголовк
 css/base.css      сброс, типографика, кнопки, dev-маркировка data-pending
 css/sections.css  секции сверху вниз
 css/doc.css       текстовые страницы
-js/config.js      НАСТРОЙКИ САЙТА: шрифт заголовков, капс, уплотнение, заметки, дыхание, темп
+js/config.js      НАСТРОЙКИ САЙТА: тон фона (розовый/молочный), шрифт заголовков, капс, уплотнение, заметки, дыхание, темп
 js/main.js        интерактив: приветствие, точка в логотипе, чек-лист, био, FAQ, выбор в форме
 js/form.js        форма -> воркер; ENDPOINT
 worker/           Cloudflare Worker: заявка -> Telegram (+ тесты)

@@ -137,7 +137,7 @@ html.no-notes .note { display: none; }
   justify-content: center;
   min-height: 44px;
   padding: 17px 30px;
-  border-radius: var(--r-pill);
+  border-radius: var(--r-btn);
   border: 1px solid transparent;
   font: inherit;
   font-size: 16px;

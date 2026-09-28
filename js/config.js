@@ -1,6 +1,7 @@
 /* Настройки сайта. Меняются здесь — вёрстку трогать не нужно.
    Значения по умолчанию = утверждённый вид макета. */
 window.SITE_CONFIG = {
+  bgTone: 'dusty-rose',        // 'dusty-rose' — пыльно-розовый | 'milk' — молочный (прежний)
   headingFont: 'Tenor Sans',   // 'Tenor Sans' | 'Prata' | 'Yeseva One' | 'Alice' | 'Cormorant'
   headingCaps: true,           // заголовки капсом + разрядка .04em
   headingBold: true,           // лёгкое уплотнение заголовков (у Tenor Sans одно начертание)
@@ -31,6 +32,7 @@ window.SITE_CONFIG = {
   s.setProperty('--hl', cfg.headingCaps ? '.04em' : 'normal');
   s.setProperty('--hs', cfg.headingBold ? '.014em' : '0');
 
+  if (cfg.bgTone === 'milk') root.setAttribute('data-tone', 'milk');
   if (!cfg.handNotes) root.classList.add('no-notes');
   if (!cfg.breath) root.classList.add('no-breath');
   root.setAttribute('data-tempo', cfg.breathTempo === '4-4' ? '4-4' : '4-6');

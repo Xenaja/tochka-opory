@@ -5,7 +5,7 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(243, 236, 225, .86);
+  background: var(--hdr);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
@@ -137,16 +137,22 @@
   align-items: center;
   justify-content: center;
 }
-.breath-rings {
+.breath-ring {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  overflow: visible;
-  fill: none;
-  stroke: var(--pencil);
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  opacity: .5;
+  pointer-events: none;
+  user-select: none;
+}
+/* та же картинка, повёрнута и отражена, чтобы не читалась копией */
+.breath-ring--in {
+  inset: 14%;
+  width: 72%;
+  height: 72%;
+  opacity: .28;
+  transform: rotate(137deg) scaleX(-1);
 }
 .breath-wash {
   position: absolute;
@@ -296,10 +302,21 @@ html.no-breath .breath-say .still { display: inline; }
 
 /* ── 3. Что такое лаборатория ────────────── */
 .band {
+  position: relative;
+  margin: 56px 0;               /* место под волну */
   background: var(--paper);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
 }
+.wave {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 56px;
+  fill: var(--paper);
+  pointer-events: none;
+}
+.wave--top { top: -55px; }     /* перекрытие 1px убирает шов */
+.wave--bottom { bottom: -55px; }
 .lab {
   display: flex;
   flex-direction: column;
@@ -463,14 +480,15 @@ html.no-notes .note--arrow { display: none; }
 .how-grid .how-time {
   justify-content: flex-end;
   gap: 10px;
-  background: var(--sage);
+  background: var(--ink);
+  color: var(--cream);
 }
-.how-time .label { color: var(--sage-ink); }
+.how-time .label { color: var(--clay-light); }
 .how-time .hd-plain {
   font-size: calc(40px * var(--hz));
   line-height: 1;
 }
-.how-time p { line-height: 1.55; color: var(--sage-ink-2); }
+.how-time p { line-height: 1.55; color: var(--dark-text); }
 
 /* ── 6. Ведущие ──────────────────────────── */
 .hosts {
@@ -523,7 +541,7 @@ html.no-notes .note--arrow { display: none; }
   max-width: var(--wrap);
   margin: 0 auto;
   padding: clamp(28px, 6vw, 72px);
-  background: var(--paper-warm);
+  background: var(--warm);
   border: 1px solid var(--line);
   border-radius: 32px;
   overflow: hidden;
@@ -593,16 +611,18 @@ html.no-notes .note--arrow { display: none; }
   flex-direction: column;
   gap: 28px;
   padding: clamp(32px, 4vw, 48px);
-  background: var(--paper);
-  border: 1px solid var(--line);
+  background: var(--ink);
+  color: var(--cream);
   border-radius: 28px;
 }
+.price-card .note { color: var(--clay-light); }
+.price-card :focus-visible { outline-color: var(--clay-light); }
 .price-top {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.price-top > span:first-child { font-size: 15px; color: var(--muted); }
+.price-top > span:first-child { font-size: 15px; color: var(--dark-text); }
 .price {
   font-size: calc(clamp(64px, 8vw, 88px) * var(--hz));
   line-height: 1;
@@ -622,20 +642,20 @@ html.no-notes .note--arrow { display: none; }
 .seats i {
   width: 14px; height: 14px;
   border-radius: 50%;
-  border: 1.5px solid var(--clay);
-  background: rgba(165, 83, 58, .12);
+  border: 1.5px solid var(--clay-light);
+  background: rgba(227, 164, 135, .14);
 }
 .seats i:first-child {
   border: none;
-  background: var(--clay);
+  background: var(--clay-light);
   animation: seatPulse 2.6s ease-in-out infinite;
 }
 @media (prefers-reduced-motion: reduce) {
   .seats i:first-child { animation: none; }
 }
 @keyframes seatPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(165, 83, 58, .45); }
-  50% { box-shadow: 0 0 0 7px rgba(165, 83, 58, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(227, 164, 135, .5); }
+  50% { box-shadow: 0 0 0 7px rgba(227, 164, 135, 0); }
 }
 .seats-cap {
   display: flex;
@@ -729,7 +749,7 @@ html.no-notes .note--arrow { display: none; }
   margin: 0 auto;
   padding: clamp(28px, 6vw, 80px);
   background: var(--ink);
-  color: var(--bg);
+  color: var(--cream);
   border-radius: 32px;
 }
 .form-intro {
@@ -738,6 +758,15 @@ html.no-notes .note--arrow { display: none; }
   gap: 24px;
 }
 .form-intro .hd em { color: var(--clay-light); }
+.form-art {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--bg);
+}
+.form-art img { width: 100%; height: 100%; object-fit: cover; }
 .form-intro p {
   max-width: 26em;
   font-size: 17px;
@@ -767,7 +796,7 @@ html.no-notes .note--arrow { display: none; }
   border-radius: 14px;
   border: 1px solid var(--dark-line);
   background: var(--dark-input);
-  color: var(--bg);
+  color: var(--cream);
   font: inherit;
   font-size: 16px;
   transition: border-color .18s;
@@ -812,9 +841,9 @@ html.no-notes .note--arrow { display: none; }
   align-items: center;
   min-height: 44px;
   padding: 12px 18px;
-  border-radius: var(--r-pill);
+  border-radius: var(--r-btn);
   border: 1px solid var(--dark-line);
-  color: var(--bg);
+  color: var(--cream);
   font-size: 15px;
   line-height: 1.2;
   cursor: pointer;
@@ -822,8 +851,8 @@ html.no-notes .note--arrow { display: none; }
 }
 .pill span:hover { border-color: #8E847A; }
 .pill input:checked + span {
-  background: var(--bg);
-  border-color: var(--bg);
+  background: var(--cream);
+  border-color: var(--cream);
   color: var(--ink);
 }
 .pill input:focus-visible + span {

@@ -1,13 +1,16 @@
 /* Токены «Точки опоры». Значения — из хэндофа Claude Design, менять только через DECISIONS.md */
 :root {
-  --bg: #F3ECE1;
-  --paper: #FAF6EF;
-  --paper-warm: #F2EADE;
+  /* фон — пыльно-розовый (дефолт с обновления 28.09); молочный — html[data-tone="milk"] ниже */
+  --bg: #F1E2DC;
+  --paper: #F8EEEA;
+  --warm: #EEDCD5;
+  --hdr: rgba(241, 226, 220, .86);
+  --cream: #F3ECE1;             /* светлый текст на шоколаде — от тона фона не зависит */
   --ink: #2B2622;
   --ink-2: #4A433C;
   --muted: #6A6158;
-  --line: #DCD2C3;
-  --line-2: #CFC3B1;
+  --line: #E0CBC2;
+  --line-2: #D3BAB0;
   --clay: #A5533A;
   --clay-hover: #8C4430;
   --clay-light: #E3A487;
@@ -40,5 +43,15 @@
   --sec: clamp(64px, 9vw, 120px);
 
   --r-pill: 999px;
+  --r-btn: 14px;                /* кнопки и пилюли выбора — как поля формы */
   --ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+html[data-tone="milk"] {
+  --bg: #F3ECE1;
+  --paper: #FAF6EF;
+  --warm: #F2EADE;
+  --hdr: rgba(243, 236, 225, .86);
+  --line: #DCD2C3;
+  --line-2: #CFC3B1;
 }
