@@ -1,0 +1,32 @@
+/* Текстовые страницы: политика конфиденциальности */
+.doc {
+  max-width: 62ch;
+  margin: 0 auto;
+  padding: clamp(40px, 8vw, 88px) var(--gut) clamp(64px, 9vw, 120px);
+  font-size: 17px;
+  line-height: 1.65;
+}
+.doc-back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: 24px;
+}
+.doc h1 {
+  font-size: calc(clamp(40px, 5vw, 60px) * var(--hz));
+  line-height: 1.05;
+}
+.doc-upd {
+  margin: 12px 0 40px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.doc h2 {
+  margin: 36px 0 10px;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.doc p + p { margin-top: 12px; }
+.doc ul { margin: 12px 0; padding-left: 1.2em; }
+.doc li + li { margin-top: 6px; }

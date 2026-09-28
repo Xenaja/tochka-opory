@@ -1,0 +1,44 @@
+/* Токены «Точки опоры». Значения — из хэндофа Claude Design, менять только через DECISIONS.md */
+:root {
+  --bg: #F3ECE1;
+  --paper: #FAF6EF;
+  --paper-warm: #F2EADE;
+  --ink: #2B2622;
+  --ink-2: #4A433C;
+  --muted: #6A6158;
+  --line: #DCD2C3;
+  --line-2: #CFC3B1;
+  --clay: #A5533A;
+  --clay-hover: #8C4430;
+  --clay-light: #E3A487;
+  --clay-soft: #B8664B;
+  --sage: #E4E6D8;
+  --sage-ink: #4E5B45;
+  --sage-ink-2: #3E4837;
+  --dark-input: #352F2A;
+  --dark-line: #5A514A;
+  --dark-text: #D9CFC2;
+  --dark-muted: #B9AEA2;
+  --pencil: #8F8374;
+  --selection: #E7C9B8;
+
+  /* Шрифт заголовков. Значения по умолчанию = утверждённый вид (Tenor Sans, капс, уплотнение).
+     Переключаются из js/config.js, вёрстку трогать не нужно. */
+  --hf: 'Tenor Sans', sans-serif;
+  --hw: 400;
+  --hi: normal;                 /* курсив акцентных слов (у Cormorant — italic) */
+  --hz: .684;                   /* коэффициент кегля: .76 для Tenor × .9 при капсе */
+  --ht: uppercase;
+  --hl: .04em;
+  --hs: .014em;                 /* faux-bold через text-stroke */
+
+  --tf: 'Golos Text', system-ui, sans-serif;
+  --nf: 'Caveat', cursive;
+
+  --wrap: 1160px;
+  --gut: clamp(20px, 5vw, 56px);
+  --sec: clamp(64px, 9vw, 120px);
+
+  --r-pill: 999px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}

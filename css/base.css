@@ -1,0 +1,199 @@
+/* База: сброс, типографика, кнопки, общие контейнеры */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+  /* лёгкая бумажная зернистость, ~6% */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.3 0 0 0 0 0.25 0 0 0 0 0.2 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color: var(--ink);
+  font-family: var(--tf);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+main { flex: 1; }
+
+img { display: block; max-width: 100%; height: auto; }
+
+p { margin: 0; text-wrap: pretty; }
+
+a { color: var(--clay); text-decoration: none; }
+a:hover { color: var(--clay-hover); }
+
+a, button, input, label {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection { background: var(--selection); }
+
+:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* якоря не прячутся под липкой шапкой */
+[id] { scroll-margin-top: 80px; }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip {
+  position: absolute;
+  left: 16px; top: -60px;
+  z-index: 100;
+  padding: 10px 18px;
+  border-radius: var(--r-pill);
+  background: var(--ink);
+  color: var(--paper);
+}
+.skip:focus { top: 12px; color: var(--paper); }
+
+.wrap {
+  /* 1160 — ширина контента, поля сверху (как в макете: content-box) */
+  max-width: calc(var(--wrap) + 2 * var(--gut));
+  margin: 0 auto;
+  padding-left: var(--gut);
+  padding-right: var(--gut);
+}
+
+/* ── заголовки ───────────────────────────── */
+.hd {
+  margin: 0;
+  font-family: var(--hf);
+  font-weight: var(--hw);
+  text-transform: var(--ht);
+  letter-spacing: var(--hl);
+  -webkit-text-stroke: var(--hs) currentColor;
+  text-wrap: balance;
+}
+/* тот же шрифт, но обычным регистром: цитата, цены, фраза чек-листа */
+.hd-plain {
+  margin: 0;
+  font-family: var(--hf);
+  font-weight: var(--hw);
+}
+.hd em, .hd-plain em {
+  font-style: var(--hi);
+  color: var(--clay);
+}
+
+.h2 {
+  font-size: calc(clamp(40px, 5vw, 60px) * var(--hz));
+  line-height: 1;
+}
+.h2--xl { font-size: calc(clamp(40px, 5vw, 64px) * var(--hz)); }
+
+.eyebrow {
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.label {
+  font-size: 13px;
+  line-height: 1.4;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* рукописные заметки */
+.note {
+  font-family: var(--nf);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--clay);
+  display: inline-block;
+  transform: rotate(-3deg);
+}
+html.no-notes .note { display: none; }
+
+/* ── кнопки ──────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 17px 30px;
+  border-radius: var(--r-pill);
+  border: 1px solid transparent;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color .18s var(--ease), color .18s var(--ease), transform .14s var(--ease);
+}
+.btn:active { transform: translateY(1px); }
+
+.btn--clay { background: var(--clay); color: #FFFFFF; }
+.btn--clay:hover { background: var(--clay-hover); color: #FFFFFF; }
+
+.btn--ghost { border-color: var(--ink); color: var(--ink); }
+.btn--ghost:hover { background: var(--ink); color: var(--paper); }
+
+.btn--ink { background: var(--ink); color: var(--paper); }
+.btn--ink:hover { background: var(--ink-2); color: var(--paper); }
+
+.btn--sm { padding: 9px 18px; font-size: 15px; font-weight: 400; }
+
+.link-u {
+  border-bottom: 1px solid var(--clay);
+  padding-bottom: 2px;
+}
+
+.text-btn {
+  align-self: flex-start;
+  min-height: 32px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--clay);
+  padding: 0 0 2px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--clay);
+  cursor: pointer;
+}
+.text-btn:hover { color: var(--clay-hover); border-color: var(--clay-hover); }
+
+/* ── dev-маркировка незакрытых данных (PENDING.md). В проде атрибута data-env нет ── */
+html[data-env="dev"] [data-pending] {
+  outline: 2px dashed #D9822B;
+  outline-offset: 4px;
+  position: relative;
+}
+html[data-env="dev"] [data-pending]::before {
+  content: "ждём: " attr(data-pending);
+  position: absolute;
+  top: -14px; right: 8px;
+  z-index: 5;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: #D9822B;
+  color: #FFFFFF;
+  font: 600 11px/1.4 var(--tf);
+  letter-spacing: .04em;
+}
