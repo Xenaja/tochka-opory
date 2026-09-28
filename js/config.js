@@ -32,6 +32,8 @@ window.SITE_CONFIG = {
   s.setProperty('--hl', cfg.headingCaps ? '.04em' : 'normal');
   s.setProperty('--hs', cfg.headingBold ? '.014em' : '0');
 
+  // рамки «ждём: ID» у незакрытых данных — только по ссылке с ?pending, посетителям не видны
+  if (/[?&]pending(=|&|$)/.test(location.search)) root.classList.add('show-pending');
   if (cfg.bgTone === 'milk') root.setAttribute('data-tone', 'milk');
   if (!cfg.handNotes) root.classList.add('no-notes');
   if (!cfg.breath) root.classList.add('no-breath');

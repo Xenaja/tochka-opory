@@ -179,13 +179,13 @@ html.no-notes .note { display: none; }
 }
 .text-btn:hover { color: var(--clay-hover); border-color: var(--clay-hover); }
 
-/* ── dev-маркировка незакрытых данных (PENDING.md). В проде атрибута data-env нет ── */
-html[data-env="dev"] [data-pending] {
+/* ── dev-маркировка незакрытых данных (PENDING.md). Видна только по адресу с ?pending ── */
+html[data-env="dev"].show-pending [data-pending] {
   outline: 2px dashed #D9822B;
   outline-offset: 4px;
   position: relative;
 }
-html[data-env="dev"] [data-pending]::before {
+html[data-env="dev"].show-pending [data-pending]::before {
   content: "ждём: " attr(data-pending);
   position: absolute;
   top: -14px; right: 8px;
