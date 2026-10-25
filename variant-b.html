@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ru" data-env="dev">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Вариант Б – сначала программа · Точка опоры – лаборатория внутренней устойчивости</title>
+<meta name="description" content="Пять недель онлайн, чтобы собрать свою формулу Точки опоры. Телесные и дыхательные практики, арт-терапия, медитации и йога-нидра, живые онлайн-встречи раз в неделю и чат с поддержкой. Десять дней на пробу – за донейшн.">
+<!-- черновик: снимается publish.sh, когда будет свой домен (PENDING D-01) -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://xenaja.github.io/tochka-opory/">
+<meta name="theme-color" content="#F1E2DC">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Точка опоры">
+<meta property="og:title" content="Точка опоры – лаборатория внутренней устойчивости">
+<meta property="og:description" content="Пять недель онлайн, чтобы собрать свою формулу Точки опоры. Фокус-группа до 12 человек, старт 20 октября. Десять дней на пробу – за донейшн.">
+<meta property="og:url" content="https://xenaja.github.io/tochka-opory/">
+<meta property="og:image" content="https://xenaja.github.io/tochka-opory/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- настройки сайта (шрифт заголовков, капс, заметки, дыхание) — до стилей, чтобы не было мигания -->
+<script src="js/config.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Golos+Text:wght@400;500;600&display=swap">
+<link rel="preload" as="image" href="img/breath-wash-420.webp" imagesrcset="img/breath-wash-420.webp 420w, img/breath-wash-700.webp 700w" imagesizes="(min-width: 480px) 420px, 90vw">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/variants.css">
+<script type="module" src="js/main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Точка опоры – лаборатория внутренней устойчивости",
+  "description": "Пять недель, чтобы собрать свою формулу Точки опоры. Телесные и дыхательные практики, арт-терапия, медитации и йога-нидра. Живые онлайн-встречи раз в неделю и чат с поддержкой каждый день.",
+  "inLanguage": "ru",
+  "provider": { "@type": "Organization", "name": "Точка опоры", "url": "https://xenaja.github.io/tochka-opory/" },
+  "offers": [
+    { "@type": "Offer", "name": "Полная программа, пять недель", "price": "4900", "priceCurrency": "RUB", "category": "Paid" },
+    { "@type": "Offer", "name": "Десять дней на пробу, донейшн", "price": "300", "priceCurrency": "RUB", "category": "Paid" }
+  ],
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "startDate": "2026-10-20",
+    "endDate": "2026-11-23",
+    "location": { "@type": "VirtualLocation", "name": "Zoom и Telegram" },
+    "instructor": [
+      { "@type": "Person", "name": "Ксения Телегина", "jobTitle": "Проводник расслабления, йога-нидра и медитация" },
+      { "@type": "Person", "name": "Наталья Кравченко", "jobTitle": "Психолог, арт-терапевт" },
+      { "@type": "Person", "name": "Валентина Данилова", "jobTitle": "Кинезиолог, тело и соматика" }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Что, если я пропущу онлайн-встречу?", "acceptedAnswer": { "@type": "Answer", "text": "Арт-практики и круги проходят в Zoom в прямом эфире, без записи – это про присутствие. После каждой встречи в чате будет короткое описание практики и задания недели, так что выпасть из процесса не получится." } },
+    { "@type": "Question", "name": "Нужен ли опыт?", "acceptedAnswer": { "@type": "Answer", "text": "Нет. Ни в йоге, ни в рисовании, ни в медитации." } },
+    { "@type": "Question", "name": "Сколько это занимает времени?", "acceptedAnswer": { "@type": "Answer", "text": "15–30 минут в день и одна онлайн-встреча в неделю. Бонусные события – по желанию." } },
+    { "@type": "Question", "name": "Где всё проходит?", "acceptedAnswer": { "@type": "Answer", "text": "Живые встречи в Zoom, чат и записи в закрытом Telegram-канале." } },
+    { "@type": "Question", "name": "В каком часовом поясе?", "acceptedAnswer": { "@type": "Answer", "text": "Московское время. Точный день и час встреч объявим до старта." } },
+    { "@type": "Question", "name": "Останутся ли записи?", "acceptedAnswer": { "@type": "Answer", "text": "Да, банк практик и записи нидр останутся у вас после программы." } },
+    { "@type": "Question", "name": "Можно ли вернуть деньги?", "acceptedAnswer": { "@type": "Answer", "text": "До старта – полностью. После первой недели – за вычетом прошедшей." } }
+  ]
+}
+</script>
+</head>
+<body>
+<nav class="vbar" aria-label="Варианты страницы"><span>Вариант</span><a href="variant-a.html">А</a><a href="variant-b.html" aria-current="page">Б</a><a href="variant-c.html">В</a><a href="./">Сейчас</a></nav>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo hd" href="#top" aria-label="Точка опоры – наверх">
+      <span class="logo-dot" id="logoDot" aria-hidden="true"></span>
+      <span>Точка опоры</span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <div class="nav-links">
+        <a href="#program">Программа</a>
+        <a href="#hosts">Ведущие</a>
+        <a href="#demo">10 дней на пробу</a>
+        <a href="#faq">Вопросы</a>
+      </div>
+      <a class="btn btn--ghost btn--sm" href="#form" data-choice="full">Записаться</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- 01 · Первый экран -->
+<section class="wrap hero" aria-labelledby="h-hero">
+  <div class="hero-main">
+    <p class="eyebrow">Лаборатория внутренней устойчивости · 5 недель онлайн</p>
+    <h1 class="hd h1" id="h-hero">Точка<br><em>опоры</em></h1>
+    <p class="lead">Пять недель, чтобы собрать свою формулу Точки опоры. Телесные и дыхательные практики, арт-терапия, медитации и йога-нидра. Живые онлайн-встречи раз в неделю и чат с поддержкой каждый день.</p>
+    <dl class="facts">
+      <div><dt>10 дней на пробу</dt><dd>за донейшн</dd></div>
+      <div><dt>Полная программа</dt><dd>с 20 октября</dd></div>
+      <div><dt>Формат</dt><dd>фокус-группа, до 12 человек</dd></div>
+    </dl>
+    <div class="cta-row">
+      <a class="btn btn--clay" href="#form" data-choice="full">Хочу в лабораторию</a>
+      <a class="btn btn--ghost" href="#demo">Сначала попробовать 10 дней</a>
+    </div>
+  </div>
+
+  <div class="breath-col">
+    <p class="note"><span id="greeting">Добрый день.</span><br>давайте сначала подышим</p>
+    <div class="breath" role="img" aria-label="Дыхательный круг: пятно медленно растёт на вдохе и сжимается на выдохе">
+      <img class="breath-ring" src="img/ring-pencil-420.webp" srcset="img/ring-pencil-420.webp 420w, img/ring-pencil-800.webp 800w" sizes="(min-width: 480px) 420px, 90vw" width="420" height="420" alt="" decoding="async" draggable="false">
+      <img class="breath-ring breath-ring--in" src="img/ring-pencil-420.webp" srcset="img/ring-pencil-420.webp 420w, img/ring-pencil-800.webp 800w" sizes="(min-width: 480px) 302px, 65vw" width="302" height="302" alt="" decoding="async" draggable="false">
+      <div class="breath-wash" aria-hidden="true">
+        <img src="img/breath-wash-420.webp" srcset="img/breath-wash-420.webp 420w, img/breath-wash-700.webp 700w" sizes="(min-width: 480px) 420px, 90vw" width="420" height="420" alt="" fetchpriority="high" decoding="async" draggable="false">
+      </div>
+      <span class="breath-center" aria-hidden="true"></span>
+      <p class="breath-say" aria-hidden="true">
+        <span class="in">вдох</span>
+        <span class="out">выдох</span>
+        <span class="still">точка опоры</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · Пять недель -->
+<section class="wrap sec-stack" id="program" aria-labelledby="h-program">
+  <div class="sec-head">
+    <h2 class="hd h2" id="h-program">Пять недель&nbsp;– пять тем</h2>
+    <p>От недели к неделе опора складывается из того, что вы находите сами.</p>
+  </div>
+  <ol class="weeks">
+    <li class="week">
+      <div class="week-mark" aria-hidden="true"><i></i></div>
+      <p class="label">Неделя 1</p>
+      <h3 class="hd">Внутренние опоры</h3>
+      <p>Где во мне то, что держит, когда вокруг всё шатается. Ищем и называем.</p>
+    </li>
+    <li class="week">
+      <div class="week-mark" aria-hidden="true"><i></i></div>
+      <p class="label">Неделя 2</p>
+      <h3 class="hd">Чувства</h3>
+      <p>Способность выдерживать и проживать то, что чувствуешь, не убегая и не заглушая.</p>
+    </li>
+    <li class="week">
+      <div class="week-mark" aria-hidden="true"><i></i></div>
+      <p class="label">Неделя 3</p>
+      <h3 class="hd">Внешние изменения</h3>
+      <p>Как тело и психика реагируют на перемены снаружи, и какие у меня есть способы ответить.</p>
+    </li>
+    <li class="week">
+      <div class="week-mark" aria-hidden="true"><i></i></div>
+      <p class="label">Неделя 4</p>
+      <h3 class="hd">Внешние опоры и связи</h3>
+      <p>Люди, места, ритуалы. Куда утекает ресурс и откуда приходит.</p>
+    </li>
+    <li class="week">
+      <div class="week-mark" aria-hidden="true"><i></i></div>
+      <p class="label">Неделя 5</p>
+      <h3 class="hd">Интеграция</h3>
+      <p>Собираем свою формулу. Позиция автора: я выбираю, на что опираться.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- 05 · Как устроена неделя -->
+<section class="band" aria-labelledby="h-how">
+  <svg class="wave wave--top" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 56 L0 18 C 200 4 420 10 640 30 C 860 50 1060 44 1260 24 C 1340 16 1400 14 1440 16 L1440 56 Z"/></svg>
+  <svg class="wave wave--bottom" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 0 L0 30 C 140 42 320 46 520 30 C 720 14 920 8 1120 24 C 1260 36 1370 40 1440 34 L1440 0 Z"/></svg>
+  <div class="wrap how">
+    <h2 class="hd h2" id="h-how">Как устроена программа</h2>
+    <ul class="how-grid">
+      <li>
+        <img src="img/ic-bank-104.webp" srcset="img/ic-bank-104.webp 1x, img/ic-bank-208.webp 2x" width="104" height="104" alt="" loading="lazy" decoding="async">
+        <h3>Банк записанных практик</h3>
+        <p>Дыхание, медитации, йога-нидра, письменные и арт-практики. Слушаете и делаете в удобное время, записи остаются у вас.</p>
+      </li>
+      <li>
+        <img src="img/ic-art-104.webp" srcset="img/ic-art-104.webp 1x, img/ic-art-208.webp 2x" width="104" height="104" alt="" loading="lazy" decoding="async">
+        <h3>5 арт-встреч онлайн – раз в неделю</h3>
+        <p>Фиксированный день и час. Тема недели через образ, а в конце – круг обратной связи: что отозвалось, что нет, на чём фокус на следующую неделю.</p>
+      </li>
+      <li>
+        <img src="img/ic-chat-104.webp" srcset="img/ic-chat-104.webp 1x, img/ic-chat-208.webp 2x" width="104" height="104" alt="" loading="lazy" decoding="async">
+        <h3>Чат с модерацией</h3>
+        <p>Тема недели, задания, ежедневные короткие отчёты, поддержка ведущих и друг друга.</p>
+      </li>
+      <li>
+        <img src="img/ic-circle-104.webp" srcset="img/ic-circle-104.webp 1x, img/ic-circle-208.webp 2x" width="104" height="104" alt="" loading="lazy" decoding="async">
+        <h3>2 круга поддержки за программу</h3>
+        <p>Отдельная встреча, где можно рассказать, что происходит, что получается, а что пока нет, и услышать других. Так мы делимся опытом и поддерживаем друг друга по-настоящему.</p>
+      </li>
+      <li>
+        <img src="img/ic-events-104.webp" srcset="img/ic-events-104.webp 1x, img/ic-events-208.webp 2x" width="104" height="104" alt="" loading="lazy" decoding="async">
+        <h3>3+ онлайн-события – бонусом</h3>
+        <p>Минимум три за поток: арт-мастерская, длинная йога-нидра, что-то ещё. Даты назначаем по ходу, анонс за 5–7 дней. Получится больше – группа только выиграет.</p>
+      </li>
+      <li class="how-time">
+        <p class="label">Сколько времени</p>
+        <p class="hd-plain">15–30 минут в день</p>
+        <p>на практику и пару строк в чат, плюс онлайн-встреча раз в неделю</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 02 · Для кого -->
+<section class="wrap who" aria-labelledby="h-who">
+  <div class="who-head">
+    <h2 class="hd h2" id="h-who">Вы узнаете себя, если…</h2>
+    <img class="who-art" src="img/il-stones-380.webp" srcset="img/il-stones-380.webp 380w, img/il-stones-760.webp 760w" sizes="(min-width: 440px) 380px, 90vw" width="380" height="380" alt="Три гладких камня, поставленные друг на друга, на верхнем – маленькая терракотовая точка" loading="lazy" decoding="async">
+  </div>
+  <div class="who-list">
+    <p class="who-hint" id="who-hint">Отметьте то, что про вас</p>
+    <div role="group" aria-labelledby="who-hint">
+      <button class="chk" type="button" aria-pressed="false"><span class="chk-dot" aria-hidden="true"></span><span>последние месяцы живёте в режиме постоянной адаптации и устали от этого</span></button>
+      <button class="chk" type="button" aria-pressed="false"><span class="chk-dot" aria-hidden="true"></span><span>тело реагирует на новости раньше, чем голова: зажим, сбитое дыхание, плохой сон</span></button>
+      <button class="chk" type="button" aria-pressed="false"><span class="chk-dot" aria-hidden="true"></span><span>хочется регулярной практики, но в одиночку не получается</span></button>
+      <button class="chk" type="button" aria-pressed="false"><span class="chk-dot" aria-hidden="true"></span><span>вы уже что-то пробовали – йогу, медитации, терапию – и хотите собрать это в свою систему</span></button>
+      <button class="chk" type="button" aria-pressed="false"><span class="chk-dot" aria-hidden="true"></span><span>нужно бережное пространство без достигаторства и обещаний «изменить жизнь за месяц»</span></button>
+    </div>
+    <div class="who-foot">
+      <div aria-live="polite">
+        <div class="who-answer" id="whoAnswer" hidden>
+          <p class="hd-plain who-msg" id="whoMsg"></p>
+          <a class="link-u" href="#demo">Начать с десяти дней на пробу →</a>
+        </div>
+      </div>
+      <p class="who-note">Опыт йоги, рисования или медитации не нужен. Нужно только желание понаблюдать за собой.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · Что такое лаборатория -->
+<section class="band" aria-label="Что такое лаборатория">
+  <svg class="wave wave--top" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 56 L0 34 C 180 8 360 4 560 22 C 760 40 940 46 1140 26 C 1260 14 1360 12 1440 18 L1440 56 Z"/></svg>
+  <svg class="wave wave--bottom" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 0 L0 20 C 160 44 380 50 600 32 C 820 14 1000 10 1200 28 C 1310 38 1390 40 1440 36 L1440 0 Z"/></svg>
+  <div class="wrap lab">
+    <p class="hd-plain quote">«Точка опоры» – это лаборатория. Не курс, где вам объяснят, как правильно, и не марафон с чек-листами. <em>Мы не гуру и не «экспертные эксперты».</em></p>
+    <p class="note note--arrow">
+      <svg width="46" height="30" viewBox="0 0 46 30" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3c4 14 16 21 36 20"/><path d="M33 17l7 6-7 5"/></svg>
+      <span>честно. мы тоже ищем свои опоры</span>
+    </p>
+    <div class="lab-cols">
+      <p>Мы не будем говорить вам, как правильно жить. Но мы знаем, что помогает держаться нам самим. У каждой из нас своя профессия – психология и арт-терапия, работа с телом, йога-нидра и медитация – и свои способы возвращаться в равновесие, проверенные на себе в непростые времена. Из них мы собрали структуру и предлагаем её вам, но не настаиваем, чтобы вы брали и использовали всё.</p>
+      <p>Главная работа в лаборатории – ваша собственная. Наблюдать за собой, пробовать, тестировать, оставлять то, что отзывается, и спокойно откладывать то, что нет. За пять недель у каждой участницы и каждого участника сложится своя формула опоры – та, что подходит именно вам и работает именно в вашей жизни.</p>
+      <div>
+        <img class="lab-art" src="img/il-three-360.webp" srcset="img/il-three-360.webp 360w, img/il-three-720.webp 720w" sizes="(min-width: 1160px) 330px, (min-width: 700px) 45vw, 90vw" width="360" height="270" alt="Три разные ветки – эвкалипт, сухоцвет и олива – в одной глиняной вазе" loading="lazy" decoding="async">
+        <p>Мы проводим лабораторию впервые. Поэтому это фокус-группа: до 12 человек и цена пилотного потока. И у нас просьба – делитесь, что работает, а что нет. Ваша обратная связь станет частью программы.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 · Ведущие -->
+<section class="wrap sec-stack" id="hosts" aria-labelledby="h-hosts">
+  <div class="sec-head">
+    <h2 class="hd h2" id="h-hosts">Ведущие</h2>
+    <p>Три подхода – глубокое расслабление, образ и тело – собраны в одну программу.</p>
+  </div>
+  <div class="hosts">
+    <article class="host">
+      <img src="img/ph-kseniya-360.webp" srcset="img/ph-kseniya-360.webp 360w, img/ph-kseniya-720.webp 720w" sizes="(min-width: 1160px) 340px, (min-width: 700px) 45vw, 90vw" width="360" height="480" alt="Акварельный портрет Ксении Телегиной" loading="lazy" decoding="async">
+      <div class="host-name">
+        <h3 class="hd">Ксения Телегина</h3>
+        <p class="host-role">Проводник расслабления · йога-нидра, медитация</p>
+      </div>
+      <p>Преподаю йога-нидру и веду вечернюю медитативную йогу: мягкие комплексы, много дыхания и медитация.</p>
+      <div class="host-more" id="bio-k">
+        <p>Я веду три направления. Вечерняя расслабляющая йога – спокойные комплексы, чтобы отпустить день. Йога-нидра – практика, где лежишь, следуешь за голосом и глубоко перезагружаешь нервную систему, а намерение, сформулированное в состоянии между сном и явью, потом прорастает в жизни. Будут короткие записи и одна-две длинные тематические нидры онлайн за программу. И медитация – для тех, кто хочет начать, бросает или хочет разобраться глубже: типы, ключи, с чего проще стартовать.</p>
+        <p>Ещё за мной круги поддержки – два за программу, где мы делимся опытом и слышим друг друга.</p>
+      </div>
+      <button class="text-btn" type="button" aria-expanded="true" aria-controls="bio-k" hidden>Подробнее</button>
+    </article>
+    <article class="host">
+      <img src="img/ph-natalya-360.webp" srcset="img/ph-natalya-360.webp 360w, img/ph-natalya-720.webp 720w" sizes="(min-width: 1160px) 340px, (min-width: 700px) 45vw, 90vw" width="360" height="480" alt="Акварельный портрет Натальи Кравченко" loading="lazy" decoding="async">
+      <div class="host-name">
+        <h3 class="hd">Наталья Кравченко</h3>
+        <p class="host-role">Психолог, арт-терапевт</p>
+      </div>
+      <p>Со мной – арт-практики: пять онлайн-встреч, по одной на тему недели. Рисовать уметь не нужно.</p>
+      <div class="host-more" id="bio-n">
+        <p>Арт-терапия не про результат на бумаге, а про то, что становится видно, когда руки заняты, а голова отпускает контроль. Внутренние опоры, чувства, реакции на перемены, связи, портрет своей устойчивости – каждую тему проживём через образ, а потом поговорим о том, что получилось.</p>
+        <p>После каждой встречи – короткое описание практики для тех, кто пропустил, и список материалов на следующую неделю. Ничего сложного: бумага, то, чем рисуете, иногда что-то из дома.</p>
+      </div>
+      <button class="text-btn" type="button" aria-expanded="true" aria-controls="bio-n" hidden>Подробнее</button>
+    </article>
+    <article class="host">
+      <img src="img/ph-valentina-360.webp" srcset="img/ph-valentina-360.webp 360w, img/ph-valentina-720.webp 720w" sizes="(min-width: 1160px) 340px, (min-width: 700px) 45vw, 90vw" width="360" height="480" alt="Акварельный портрет Валентины Даниловой" loading="lazy" decoding="async">
+      <div class="host-name">
+        <h3 class="hd">Валентина Данилова</h3>
+        <p class="host-role">Кинезиолог · тело и соматика</p>
+      </div>
+      <p>Мои практики помогают услышать, как тело держит стресс, и мягко это отпустить.</p>
+      <div class="host-more" id="bio-v">
+        <p>Тело часто знает, где наша опора, раньше, чем мы формулируем это словами: где зажимается при тревоге, где расслабляется в безопасности, откуда берётся сила, когда нужно устоять. Будем работать с этим через простые движения, дыхание и внимание к ощущениям – без сложных техник и без спорта.</p>
+        <p>Практики короткие, их можно встроить в любой день. Что-то останется с вами как быстрый способ вернуть себя в тело, когда вокруг штормит.</p>
+      </div>
+      <button class="text-btn" type="button" aria-expanded="true" aria-controls="bio-v" hidden>Подробнее</button>
+    </article>
+  </div>
+</section>
+
+<!-- 07 · Десять дней на пробу (демо) -->
+<section class="ow-sec" id="demo" aria-labelledby="h-ow">
+  <div class="ow">
+    <div class="ow-text">
+      <p class="eyebrow">Демо-версия · 10&nbsp;дней онлайн</p>
+      <h2 class="hd h2 h2--xl" id="h-ow">Десять дней на&nbsp;пробу</h2>
+      <p class="ow-lead">Короткая версия программы, чтобы почувствовать, подходит ли она вам. За десять дней знакомимся с главной идеей лаборатории: где искать опору, когда жизнь выбивает из равновесия, и как возвращаться к ней в обычные дни. Пробуем практики всех трёх ведущих и смотрим, что откликается.</p>
+    </div>
+    <img class="ow-art" src="img/il-window-480.webp" srcset="img/il-window-480.webp 480w, img/il-window-960.webp 960w" sizes="(min-width: 560px) 480px, 80vw" width="480" height="480" alt="Приоткрытое окно с лёгкой занавеской и растением на подоконнике" loading="lazy" decoding="async">
+
+    <div class="ow-parts">
+      <div class="ow-inside">
+        <h3 class="label">Что внутри</h3>
+        <ul>
+          <li>йога-нидра «Точка опоры» – основная практика на каждый день</li>
+          <li>телесная практика для опоры в теле и снятия напряжения</li>
+          <li>арт-встреча онлайн с кругом обратной связи</li>
+          <li>небольшие практики на выбор, по 2–7 минут</li>
+          <li>чат: тема утром, пара строк вечером</li>
+          <li>в последний день – финальная нидра и карточка вашей формулы опоры</li>
+        </ul>
+      </div>
+      <div class="ow-path">
+        <h3 class="label">Как идём</h3>
+        <ol>
+          <li><i aria-hidden="true"></i><p>Первые дни замечаем, что уже держит.</p></li>
+          <li><i aria-hidden="true"></i><p>Потом пробуем практики и смотрим, что отзывается.</p></li>
+          <li><i aria-hidden="true"></i><p>В конце собираем свою маленькую формулу опоры – её можно забрать с собой.</p></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="ow-foot">
+      <p class="ow-price">
+        <span class="hd-plain">от 300 ₽</span>
+        <span>донейшн. Нам важно, чтобы попробовать мог каждый.</span>
+      </p>
+      <div class="ow-cta">
+        <a class="btn btn--ink" href="#form" data-choice="open">Записаться на 10 дней</a>
+        <span class="note">можно просто прийти посмотреть</span>
+      </div>
+      <p class="ow-fine">Мы тоже проверяем на этих десяти днях формат, тайминги и технику и говорим об этом открыто. После можно остаться на полную программу или не остаться, и это нормально.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 08 · Участие -->
+<section class="wrap join" aria-labelledby="h-join">
+  <div class="join-text">
+    <p class="eyebrow">Пилотный поток · 20 октября – 23 ноября</p>
+    <h2 class="hd h2" id="h-join">Участие</h2>
+    <p class="join-sum">Всё из программы выше – на пять недель, в группе до 12 человек.</p>
+    <p class="join-ask">Что мы просим взамен: два коротких опроса, в середине и в конце, и отзыв своими словами.</p>
+  </div>
+  <div class="price-card">
+    <p class="price-top">
+      <span>Цена фокус-группы за пять недель</span>
+      <span class="hd-plain price">4 900 ₽</span>
+    </p>
+    <div class="seats-wrap">
+      <div class="seats" aria-hidden="true"><i title="ваше место"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="seats-cap">
+        <span>12 мест. Запись до 18 октября.</span>
+        <span class="note">одно из них – ваше</span>
+      </p>
+    </div>
+    <a class="btn btn--clay" href="#form" data-choice="full">Хочу в лабораторию</a>
+  </div>
+</section>
+
+<!-- 09 · Вопросы -->
+<section class="faq-sec" id="faq" aria-labelledby="h-faq">
+  <div class="wrap faq">
+    <div class="faq-head">
+      <h2 class="hd h2" id="h-faq">Вопросы</h2>
+      <p class="note">не нашли ответ?<br>напишите – ответим лично</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="true" aria-controls="faq-1" id="faq-q1">Что, если я пропущу онлайн-встречу?<span class="faq-sign" aria-hidden="true"></span></button></h3>
+        <p class="faq-a" id="faq-1" role="region" aria-labelledby="faq-q1">Арт-практики и круги проходят в Zoom в прямом эфире, без записи – это про присутствие. После каждой встречи в чате будет короткое описание практики и задания недели, так что выпасть из процесса не получится.</p>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="true" aria-controls="faq-2" id="faq-q2">Нужен ли опыт?<span class="faq-sign" aria-hidden="true"></span></button></h3>
+        <p class="faq-a" id="faq-2" role="region" aria-labelledby="faq-q2">Нет. Ни в йоге, ни в рисовании, ни в медитации.</p>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="true" aria-controls="faq-3" id="faq-q3">Сколько это занимает времени?<span class="faq-sign" aria-hidden="true"></span></button></h3>
+        <p class="faq-a" id="faq-3" role="region" aria-labelledby="faq-q3">15–30 минут в день и одна онлайн-встреча в неделю. Бонусные события – по желанию.</p>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="true" aria-controls="faq-4" id="faq-q4">Где всё проходит?<span class="faq-sign" aria-hidden="true"></span></button></h3>
+        <p class="faq-a" id="faq-4" role="region" aria-labelledby="faq-q4">Живые встречи в Zoom, чат и записи в закрытом Telegram-канале.</p>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="true" aria-controls="faq-5" id="faq-q5">В каком часовом поясе?<span class="faq-sign" aria-hidden="true"></span></button></h3>
+        <p class="faq-a" id="faq-5" role="region" aria-labelledby="faq-q5">Московское время. Точный день и час встреч объявим до старта.</p>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="true" aria-controls="faq-6" id="faq-q6">Останутся ли записи?<span class="faq-sign" aria-hidden="true"></span></button></h3>
+        <p class="faq-a" id="faq-6" role="region" aria-labelledby="faq-q6">Да, банк практик и записи нидр останутся у вас после программы.</p>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="true" aria-controls="faq-7" id="faq-q7">Можно ли вернуть деньги?<span class="faq-sign" aria-hidden="true"></span></button></h3>
+        <p class="faq-a" id="faq-7" role="region" aria-labelledby="faq-q7">До старта – полностью. После первой недели – за вычетом прошедшей.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · Форма -->
+<section class="form-sec" id="form" aria-labelledby="h-form">
+  <div class="form-box">
+    <div class="form-intro">
+      <h2 class="hd h2 h2--xl" id="h-form">Соберём вашу<br><em>точку опоры</em></h2>
+      <p>Оставьте контакт – напишем в Telegram, ответим на вопросы и расскажем, как всё устроено.</p>
+      <div class="form-art">
+        <img src="img/il-tea-300.webp" srcset="img/il-tea-300.webp 300w, img/il-tea-600.webp 600w" sizes="300px" width="300" height="300" alt="Чашка чая с тонкой струйкой пара рядом со сложенным вязаным пледом" loading="lazy" decoding="async">
+      </div>
+    </div>
+
+    <form class="lead-form" id="leadForm" novalidate data-pending="F-01">
+      <div class="field">
+        <label for="lf-name">Имя</label>
+        <input type="text" id="lf-name" name="name" autocomplete="given-name" placeholder="Как к вам обращаться" maxlength="80" required aria-describedby="lf-name-err">
+        <p class="field-err" id="lf-name-err"></p>
+      </div>
+      <div class="field">
+        <label for="lf-tg">Телеграм</label>
+        <input type="text" id="lf-tg" name="tg" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="@username" maxlength="64" required aria-describedby="lf-tg-err">
+        <p class="field-err" id="lf-tg-err"></p>
+      </div>
+      <fieldset class="choice">
+        <legend>Что выбираете</legend>
+        <div class="pills">
+          <label class="pill"><input type="radio" name="choice" value="open"><span>10 дней на пробу</span></label>
+          <label class="pill"><input type="radio" name="choice" value="full" checked><span>Полная программа</span></label>
+          <label class="pill"><input type="radio" name="choice" value="both"><span>И то и другое</span></label>
+        </div>
+      </fieldset>
+      <div class="hp" aria-hidden="true">
+        <label for="lf-company">Компания</label>
+        <input type="text" id="lf-company" name="company" tabindex="-1" autocomplete="off">
+      </div>
+      <label class="consent" for="lf-consent">
+        <input type="checkbox" id="lf-consent" name="consent" required aria-describedby="lf-consent-err">
+        <span>Даю согласие на обработку персональных данных и принимаю <a href="privacy.html">политику конфиденциальности</a></span>
+      </label>
+      <p class="field-err" id="lf-consent-err"></p>
+      <button class="btn btn--send" type="submit">Отправить</button>
+      <p class="form-note" id="formNote" role="status" aria-live="polite">Ответим в течение дня, лично.</p>
+    </form>
+
+    <div class="form-done" id="formDone" hidden>
+      <span class="form-done-dot" aria-hidden="true"></span>
+      <h3 class="hd" id="doneTitle" tabindex="-1">Спасибо</h3>
+      <p>Мы получили заявку и ответим в течение дня, лично.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <span class="hd ftr-brand">Точка опоры</span>
+    <span>Лаборатория внутренней устойчивости · Zoom и Telegram · московское время</span>
+    <a href="privacy.html">Политика конфиденциальности</a>
+  </div>
+</footer>
+
+</body>
+</html>

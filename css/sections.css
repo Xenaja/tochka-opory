@@ -222,8 +222,7 @@ html.no-breath .breath-say .still { display: inline; }
 /* ── 2. «Вы узнаете себя, если…» ─────────── */
 .who {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
-  gap: clamp(40px, 6vw, 80px);
+  gap: clamp(32px, 6vw, 80px);
   padding-top: clamp(56px, 8vw, 104px);
   padding-bottom: clamp(56px, 8vw, 104px);
   border-top: 1px solid var(--line);
@@ -239,6 +238,15 @@ html.no-breath .breath-say .still { display: inline; }
   aspect-ratio: 1 / 1;
   border-radius: 24px;
   object-fit: cover;
+}
+/* В одну колонку камни между заголовком и списком читались как карточка
+   «узнайте себя в картинке» — уводим их вниз, после списка, и уменьшаем */
+@media (max-width: 999px) {
+  .who-head { display: contents; }
+  .who-art { order: 1; justify-self: center; max-width: 220px; }
+}
+@media (min-width: 1000px) {
+  .who { grid-template-columns: 1fr 1fr; }
 }
 .who-list { display: flex; flex-direction: column; }
 .who-hint {
@@ -530,7 +538,7 @@ html.no-notes .note--arrow { display: none; }
 }
 .host-more[hidden] { display: none; }
 
-/* ── 7. Открытая неделя ──────────────────── */
+/* ── 7. Десять дней на пробу ─────────────── */
 .ow-sec { padding: 0 var(--gut); }
 .ow {
   box-sizing: content-box;       /* 1160 — ширина контента внутри плашки, как в макете */
@@ -554,12 +562,83 @@ html.no-notes .note--arrow { display: none; }
 }
 .ow-text .eyebrow { color: var(--sage-ink); }
 .ow-lead { font-size: 18px; }
-.ow-sub { color: var(--ink-2); }
+/* «Что внутри» и «Как идём» — под первой строкой, на всю ширину плашки */
+.ow-parts {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: clamp(32px, 4vw, 56px);
+  padding-top: clamp(28px, 4vw, 40px);
+  border-top: 1px solid var(--line);
+}
+.ow-parts .label { margin: 0 0 8px; color: var(--sage-ink); font-weight: 500; }
+.ow-parts ul,
+.ow-parts ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ow-inside li {
+  padding: 12px 0 12px 22px;
+  border-bottom: 1px solid var(--line);
+  line-height: 1.5;
+  background: radial-gradient(circle, var(--clay) 3px, transparent 3.5px) 0 1.2em / 8px 8px no-repeat;
+}
+.ow-inside li:last-child { border-bottom: 0; }
+/* три шага — точка растёт, как в «Пяти неделях» */
+.ow-path ol {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ow-path li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 10px 0 18px;
+}
+.ow-path li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 15.5px; top: 32px; bottom: -6px;
+  border-left: 1px dashed var(--line-2);
+}
+.ow-path i {
+  justify-self: center;
+  width: var(--d);
+  height: var(--d);
+  margin-top: calc((26px - var(--d)) / 2);
+  border-radius: 50%;
+  background: var(--clay);
+}
+.ow-path li:nth-child(1) i { --d: 8px; }
+.ow-path li:nth-child(2) i { --d: 14px; }
+.ow-path li:nth-child(3) i { --d: 20px; box-shadow: 0 0 0 6px rgba(165, 83, 58, .14); }
+.ow-path p { line-height: 1.6; }
+
+.ow-foot {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px clamp(24px, 4vw, 56px);
+  padding-top: clamp(28px, 4vw, 40px);
+  border-top: 1px solid var(--line);
+}
+.ow-fine {
+  flex-basis: 100%;
+  max-width: 640px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted);
+}
 .ow-price {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding-top: 8px;
 }
 .ow-price .hd-plain {
   font-size: calc(56px * var(--hz));

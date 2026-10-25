@@ -84,7 +84,7 @@ check('чек-лист: все пять', await js('return document.getElementBy
 
 check('по умолчанию выбрана полная программа', await js('return document.querySelector("#leadForm").choice.value'), 'full');
 await js('document.querySelector("a[data-choice=open]").click()');
-check('CTA открытой недели выбирает «Открытая неделя»', await js('return document.querySelector("#leadForm").choice.value'), 'open');
+check('CTA демо выбирает «10 дней на пробу»', await js('return document.querySelector("#leadForm").choice.value'), 'open');
 await js('document.querySelector(".hero a[data-choice=full]").click()');
 check('CTA «Хочу в лабораторию» выбирает полную', await js('return document.querySelector("#leadForm").choice.value'), 'full');
 

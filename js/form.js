@@ -6,7 +6,7 @@
 const ENDPOINT = null;
 
 const CHOICE_LABEL = {
-  open: 'Открытая неделя',
+  open: '10 дней на пробу',
   full: 'Полная программа',
   both: 'И то и другое'
 };

@@ -82,7 +82,7 @@ function initFaq() {
   }));
 }
 
-/* Кнопки, ведущие к форме, заранее выбирают вариант: «Полная программа» или «Открытая неделя» */
+/* Кнопки, ведущие к форме, заранее выбирают вариант: «Полная программа» или «10 дней на пробу» */
 function initChoiceLinks() {
   document.querySelectorAll('a[data-choice]').forEach((a) => {
     a.addEventListener('click', () => {
