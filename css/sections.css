@@ -565,18 +565,17 @@ html.no-notes .note--arrow { display: none; }
 }
 .ow-text .eyebrow { color: var(--sage-ink); }
 .ow-lead { font-size: 18px; }
-/* «Что внутри» и «Как идём» — под первой строкой, на всю ширину плашки */
+/* «Что внутри» — под первой строкой, на всю ширину плашки, в две колонки */
 .ow-parts {
   grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
-  gap: clamp(32px, 4vw, 56px);
   padding-top: clamp(28px, 4vw, 40px);
   border-top: 1px solid var(--line);
 }
 .ow-parts .label { margin: 0 0 8px; color: var(--sage-ink); font-weight: 500; }
-.ow-parts ul,
-.ow-parts ol {
+.ow-parts ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  column-gap: clamp(32px, 4vw, 56px);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -587,39 +586,6 @@ html.no-notes .note--arrow { display: none; }
   line-height: 1.5;
   background: radial-gradient(circle, var(--clay) 3px, transparent 3.5px) 0 1.2em / 8px 8px no-repeat;
 }
-.ow-inside li:last-child { border-bottom: 0; }
-/* три шага — точка растёт, как в «Пяти неделях» */
-.ow-path ol {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.ow-path li {
-  position: relative;
-  display: grid;
-  grid-template-columns: 32px 1fr;
-  gap: 16px;
-  align-items: start;
-  padding: 10px 0 18px;
-}
-.ow-path li:not(:last-child)::before {
-  content: "";
-  position: absolute;
-  left: 15.5px; top: 32px; bottom: -6px;
-  border-left: 1px dashed var(--line-2);
-}
-.ow-path i {
-  justify-self: center;
-  width: var(--d);
-  height: var(--d);
-  margin-top: calc((26px - var(--d)) / 2);
-  border-radius: 50%;
-  background: var(--clay);
-}
-.ow-path li:nth-child(1) i { --d: 8px; }
-.ow-path li:nth-child(2) i { --d: 14px; }
-.ow-path li:nth-child(3) i { --d: 20px; box-shadow: 0 0 0 6px rgba(165, 83, 58, .14); }
-.ow-path p { line-height: 1.6; }
 
 .ow-foot {
   grid-column: 1 / -1;
