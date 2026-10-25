@@ -82,7 +82,10 @@
 .h1 {
   font-size: calc(clamp(60px, 9vw, 116px) * var(--hz));
   line-height: .92;
+  letter-spacing: .08em;
 }
+/* «ОПОРЫ» шире «ТОЧКА»: разрядка подобрана, чтобы А и Ы стояли вровень (Tenor Sans, капс) */
+.h1 em { letter-spacing: -.03em; }
 .lead {
   font-size: clamp(18px, 1.6vw, 20px);
   line-height: 1.6;
